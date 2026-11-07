@@ -1,0 +1,15 @@
+# Runtime dependencies (pinned to the versions this project was tested with).
+# PySide6-Essentials is the official PySide6 subset (QtCore/QtGui/QtWidgets).
+# It is used with `import PySide6` exactly like the full package, minus the
+# ~500 MB of extras (QtWebEngine = Chromium) that this project does not need.
+PySide6-Essentials==6.12.0
+Pillow==13.0.0
+
+# Offline voice (Phase 3): pyttsx3 drives Windows' built-in speech engine (SAPI5)
+# through comtypes and pywin32 (pip also installs the small `pypiwin32` helper by itself).
+pyttsx3==2.99
+comtypes==1.4.17
+pywin32==312
+
+# Added in later phases:
+#   pyinstaller  (Phase 7 - building the .exe)
